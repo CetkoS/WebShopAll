@@ -1,0 +1,29 @@
+.navbar {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+    
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  
+  .nav-link {
+    &.active {
+      font-weight: 500;
+      color: #0d6efd !important;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 1rem 0;
+    
+    .nav-link {
+      padding: 0.5rem 0;
+    }
+  }
+}

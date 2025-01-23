@@ -1,0 +1,21 @@
+
+.card {
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    height: 200px;
+    object-fit: contain;
+  }
+
+  .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}

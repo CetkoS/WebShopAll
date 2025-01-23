@@ -1,0 +1,25 @@
+<div class="dropdown-container mb-4">
+  <div class="btn-group" ngbDropdown>
+    <button
+      type="button"
+      class="btn btn-outline-primary"
+      id="categoryDropdown"
+      ngbDropdownToggle
+    >
+      Select Category
+    </button>
+    <div class="dropdown-menu" ngbDropdownMenu aria-labelledby="categoryDropdown">
+      <button ngbDropdownItem (click)="selectCategory(null)">
+        All Categories
+      </button>
+      @for (category of categories; track category) {
+        <button ngbDropdownItem (click)="selectCategory(category)">
+          {{ category | titlecase }}
+        </button>
+      }
+    </div>
+  </div>
+  @if (selectedCategory && selectedCategory !== 'all') {
+    <span class="badge bg-primary ms-2">{{ selectedCategory | titlecase }}</span>
+  }
+</div>

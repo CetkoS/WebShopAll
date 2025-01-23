@@ -1,0 +1,9 @@
+.dropdown-container {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  max-height: 300px;
+  overflow-y: auto;
+}
