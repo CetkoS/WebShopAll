@@ -4,6 +4,15 @@ using WebShop.Api.Services.Products;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllApp", policy =>
+    {
+        policy.AllowAnyOrigin()               
+              .AllowAnyHeader()                     
+              .AllowAnyMethod();                    
+    });
+});
 
 builder.Services.AddControllers();
 
@@ -23,6 +32,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseCors("AllowAllApp");
 
 app.UseSwagger();
 app.UseSwaggerUI(options =>
