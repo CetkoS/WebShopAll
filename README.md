@@ -30,11 +30,15 @@ To run the project locally using Docker Compose, follow these steps:
    - [Docker Installation Guide](https://docs.docker.com/get-docker/)
    - Docker Compose is included with Docker Desktop.
 
-2. Clone this repository
-3. In the root folder of repository (where docker-compose file is placed) run the command:
-    docker compose up --build
-4. The frontend will be up and run on http://localhost:4200
-5. The backend will be up and run on http://localhost:5085 and also on the same address provides API specification (swagger)
-6. When you want to stop containers run the following command
-   docker-compose down
+2. Clone this repository.
+
+3. In the root folder of the repository (where the `docker-compose.yml` file is located), run the command:
+   ```bash
+   docker compose up --build
+4. The frontend will be up and running at: http://localhost:4200
+5. The backend will be up and running at: http://localhost:5085
+   The same URL also provides the API specification (Swagger).
+6. When you want to stop the containers, run the following command:
+   ```bash
+   docker down
  
